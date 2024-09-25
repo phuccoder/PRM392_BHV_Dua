@@ -1,10 +1,10 @@
 package com.example.login;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,11 +26,18 @@ public class DuaChoActivity extends AppCompatActivity {
     Button btnStartRace;
     TextView textView4, boDem;
     Random random;
-    MediaPlayer nhacCho, nhacBatDau, beepSound;
+    MediaPlayer nhacCho, nhacBatDau, beepSound, nhacChienThang;
     boolean raceFinished = false;
     Handler handler = new Handler();
     int countdown = 3;
-
+    @Override
+    protected void onPostResume() {
+        nhacChienThang = MediaPlayer.create(this, R.raw.nhacchienthang);
+        super.onPostResume();
+        if (!nhacChienThang.isPlaying()){
+            nhacCho.start();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +64,8 @@ public class DuaChoActivity extends AppCompatActivity {
         // Âm thanh
         nhacCho = MediaPlayer.create(this, R.raw.nhaccho);
         nhacBatDau = MediaPlayer.create(this, R.raw.nhaccho2);
-        beepSound = MediaPlayer.create(this, R.raw.beep); // Add beep sound
+        beepSound = MediaPlayer.create(this, R.raw.beep);
+        nhacChienThang = MediaPlayer.create(this, R.raw.nhacchienthang);// Add beep sound
         nhacCho.start();
 
         btnStartRace.setOnClickListener(v -> startCountdown());
@@ -134,6 +142,14 @@ public class DuaChoActivity extends AppCompatActivity {
         dogTimes.put("Chó 3", dog3Time);
         dogTimes.put("Chó 4", dog4Time);
 
+        // Create a mapping of dog names to drawable resource names
+        Map<String, String> dogDrawableMap = new HashMap<>();
+        dogDrawableMap.put("Chó 1", "alaska");
+        dogDrawableMap.put("Chó 2", "corgi");
+        dogDrawableMap.put("Chó 3", "dalmatian");
+        dogDrawableMap.put("Chó 4", "husky");
+
+
         // Sort the dogs by their finish times
         List<Map.Entry<String, Long>> sortedDogs = new ArrayList<>(dogTimes.entrySet());
         Collections.sort(sortedDogs, Map.Entry.comparingByValue());
@@ -148,5 +164,23 @@ public class DuaChoActivity extends AppCompatActivity {
 
         // Show the ranking as a Toast message
         Toast.makeText(this, ranking.toString(), Toast.LENGTH_LONG).show();
+
+        // Get the top 3 dogs
+        List<DogResult> top3Results = new ArrayList<>();
+        for (int i = 0; i < 3 && i < sortedDogs.size(); i++) {
+            String dogName = sortedDogs.get(i).getKey();
+            String drawableName = dogDrawableMap.get(dogName);
+            int imageResId = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+            top3Results.add(new DogResult(dogName, imageResId));
+        }
+
+        nhacBatDau.stop();
+        nhacChienThang.start();
+
+        Intent intent = new Intent(DuaChoActivity.this, KetquaThangActivity.class);
+        intent.putExtra("top3Results", (ArrayList<DogResult>) top3Results);
+
+        startActivity(intent);
     }
 }
+
