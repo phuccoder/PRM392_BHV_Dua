@@ -1,6 +1,8 @@
 package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -33,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
                     // Đăng nhập thành công
                     Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                     // Chuyển hướng sang màn hình khác hoặc thực hiện các hành động tiếp theo
+                    Intent intent = new Intent(LoginActivity.this, DuaChoActivity.class);
+                    startActivity(intent);
                 }
             }
         });
@@ -56,4 +60,6 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         }
     }
+
+
 }

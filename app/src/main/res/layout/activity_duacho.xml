@@ -60,121 +60,203 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.150" />
 
-    <!-- Các ImageView đại diện cho chó và đường đua -->
     <ImageView
         android:id="@+id/dog1"
         android:layout_width="88dp"
         android:layout_height="46dp"
-        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.359"
         app:srcCompat="@drawable/alaska" />
 
-    <!-- Đường đua 1 -->
     <View
         android:id="@+id/line1"
-        android:layout_width="0dp"
+        android:layout_width="220dp"
         android:layout_height="2dp"
         android:background="#000000"
-        app:layout_constraintStart_toEndOf="@id/dog1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/dog1" />
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.332" />
 
     <ImageView
         android:id="@+id/dog2"
         android:layout_width="88dp"
         android:layout_height="46dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dog1"
-        app:srcCompat="@drawable/chihuahua" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/corgi" />
 
-    <!-- Đường đua 2 -->
     <View
-        android:id="@+id/line2"
-        android:layout_width="0dp"
+        android:id="@+id/line3"
+        android:layout_width="220dp"
         android:layout_height="2dp"
+        android:layout_marginTop="56dp"
         android:background="#000000"
-        app:layout_constraintStart_toEndOf="@id/dog2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/dog2" />
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintVertical_bias="0.011" />
 
     <ImageView
         android:id="@+id/dog3"
         android:layout_width="88dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dog2"
-        app:srcCompat="@drawable/corgi" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dalmatian" />
 
-    <!-- Đường đua 3 -->
     <View
-        android:id="@+id/line3"
-        android:layout_width="0dp"
+        android:id="@+id/line4"
+        android:layout_width="220dp"
         android:layout_height="2dp"
+        android:layout_marginTop="60dp"
         android:background="#000000"
-        app:layout_constraintStart_toEndOf="@id/dog3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/dog3" />
+        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/dog4"
         android:layout_width="88dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dog3"
-        app:srcCompat="@drawable/dalmatian" />
-
-    <!-- Đường đua 4 -->
-    <View
-        android:id="@+id/line4"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:background="#000000"
-        app:layout_constraintStart_toEndOf="@id/dog4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/dog4" />
-
-    <ImageView
-        android:id="@+id/dog5"
-        android:layout_width="88dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dog4"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/husky" />
 
-    <!-- Đường đua 5 -->
     <View
         android:id="@+id/line5"
-        android:layout_width="0dp"
+        android:layout_width="220dp"
         android:layout_height="2dp"
         android:background="#000000"
-        app:layout_constraintStart_toEndOf="@id/dog5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/dog5" />
+        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4"
+        app:layout_constraintVertical_bias="0.25" />
 
-    <!-- Nút bắt đầu -->
     <Button
         android:id="@+id/btnStartRace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bắt Đầu"
-        app:layout_constraintTop_toBottomOf="@id/dog5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Sẵn Sàng"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dog4" />
+
+    <ImageView
+        android:id="@+id/dog5"
+        android:layout_width="44dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253"
+        app:srcCompat="@drawable/chihuahua" />
+
+    <TextView
+        android:id="@+id/boDem"
+        android:layout_width="97dp"
+        android:layout_height="51dp"
+        android:text="CHUẨN BỊ"
+        android:textColor="#CC0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dog5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253" />
+
+    <TextView
+        android:id="@+id/tienCuocDog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cược chó 2"
+        android:textColor="#CC0000"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tienCuocDog1"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <TextView
+        android:id="@+id/tienCuocDog1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cược chó 1"
+        android:textColor="#CC0000"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dog5"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <TextView
+        android:id="@+id/tienCuocDog4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cược chó 4"
+        android:textColor="#CC0000"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tienCuocDog3"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <TextView
+        android:id="@+id/tienCuocDog3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cược chó 3"
+        android:textColor="#CC0000"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tienCuocDog2"
+        app:layout_constraintVertical_bias="0.148" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
