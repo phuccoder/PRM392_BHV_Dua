@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Mật khẩu</string>
+    <string name="login_button">Đăng nhập</string>
+    <string name="invalid_credentials">Email hoặc mật khẩu không chính xác!</string>
+    <string name="empty_fields">Vui lòng nhập đầy đủ thông tin!</string>
+
+</resources>
